@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript/jQuery Tutorials</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="styles/tutorials.css" type="text/css">
+    <link rel="stylesheet" href="styles/prism.css">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93754258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+    
+    <header class="navbar">
+        
+        <h1><a href="index.html"> { Coding Tutorials } </a></h1>
+        
+        <nav>
+            <ul>
+                <li><a href="type.html">Tutorial 1</a></li>
+                <li><a href="progressbar.html">Tutorial 2</a></li>
+                <li><a href="timeline.html">Tutorial 3</a></li>
+            </ul>
+        </nav>
+    </header>
+       
+    <main class="main-progressbar">
+        <h1>Here's a circular <br> progress bar.</h1>
+
+         <div class="circle-container">
+            <div id="htmlContainer"><h3 class="html">HTML</h3></div>
+            <div id="cssContainer"><h3 class="css">CSS</h3></div>
+             <div id="javaContainer"><h3 class="java">Javascript/ <br> jQuery</h3></div>
+        </div>
+        
+        <div class="body-text">
+            <p>Use this to indicate your knowledge and skill level on a certain program or tool.</p> 
+            <p>Learn how to code it below.</p></div>
+        
+        <div class="steps">
+            
+            
+            <h2>Step 1</h2>
+            <p> Download the <a href="https://kimmobrunfeldt.github.io/progressbar.js/" target="_blank">Progress Bar master file</a>.</p>
+            
+            
+            <h2>Step 2</h2>
+            <p> Include the jQuery library to the scripts section of your HTML.</p>
+            
+                <pre><code class=language-javascript>    https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js</code></pre>
+                
+            <h2>Step 3</h2>
+            <p> Find and include the <span style="color: lightskyblue; font-style: italic;">dist/progressbar.min.js</span> from the master file to your scripts section.</p>
+           
+           <h2>Step 4</h2>
+            <p> Follow the HTML markup below to create your circle containers.</p>
+            
+            
+                <pre><code class=language-markup>    
+    &lt;div class="circle-container">
+        &lt;div id="htmlContainer">&lt;h3 class="html">HTML&lt;/h3>&lt;/div>
+        &lt;div id="cssContainer">&lt;h3 class="css">CSS&lt;/h3>&lt;/div>
+         &lt;div id="javaContainer">&lt;h3 class="java">Javascript&lt;/h3>&lt;/div>
+    &lt;/div>
+           </code></pre>
+           
+           <h2>Step 5</h2>
+            <p> Using CSS, give your circular progress bars a width and a height. You can also position your circular progress bars and labels however you like.</p>
+            
+            
+                <pre><code class=language-css>    
+    #htmlContainer,
+    #cssContainer,
+    #javaContainer {
+        width: 200px;
+        height: 200px;
+        position: relative;
+    }
+
+    .html,
+    .css,
+    .java {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+           </code></pre>
+           
+           <h2>Step 6</h2>
+            <p> Now we just have to write a few scripts in your scripts section or file to make your circular progress bars animate. You can also customize the appearance, duration, and the length of your progress bar.</p>
+            
+            
+                <pre><code class=language-javascript>    
+    var bar = new ProgressBar.Circle(htmlContainer, {
+       strokeWidth: 10,
+       easing: 'easeInOut',
+       duration: 1400,
+       color: '#FFEA82',
+       trailColor: '#eee',
+       trailWidth: 10,
+       svgStyle: null
+     });
+
+     bar.animate(0.65);
+          
+    var bar = new ProgressBar.Circle(cssContainer, {
+      strokeWidth: 10,
+      easing: 'easeInOut',
+      duration: 1400,
+      color: '#FFEA82',
+      trailColor: '#eee',
+      trailWidth: 10,
+      svgStyle: null
+    });
+
+    bar.animate(0.65);
+
+    var bar = new ProgressBar.Circle(javaContainer, {
+      strokeWidth: 10,
+      easing: 'easeInOut',
+      duration: 1400,
+      color: '#FFEA82',
+      trailColor: '#fff',
+      trailWidth: 10,
+      svgStyle: null
+    });
+
+    bar.animate(.30);
+           </code></pre>
+            
+        </div>
+            
+    </main>
+    
+    <footer>
+    <p>&copy; 2017 April Alayon. <a href="credits.html">Credits</a>. For educational purposes only.</p> 
+</footer>
+    
+<!--Scripts goes here-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="plug-ins/progressbar.js-master/dist/progressbar.min.js"></script>
+   <script src="scripts/progressbar.js"></script>
+   <script src="scripts/tutorials.js"></script>
+   <script src="scripts/prism.js"></script>
+   <script src="scripts/stickynav.js"></script>
+    
+</body>
+</html>

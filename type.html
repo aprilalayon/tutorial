@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript/jQuery Tutorials</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="styles/tutorials.css" type="text/css">
+    <link rel="stylesheet" href="styles/prism.css">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93754258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+    
+    <header class="navbar">
+        
+        <h1><a href="index.html"> { Coding Tutorials } </a></h1>
+        
+        <nav>
+            <ul>
+                <li><a href="type.html">Tutorial 1</a></li>
+                <li><a href="progressbar.html">Tutorial 2</a></li>
+                <li><a href="timeline.html">Tutorial 3</a></li>
+            </ul>
+        </nav>
+    </header>
+       
+    <main class="main-type">
+        <h1><span class="type-tutorial"></span></h1>
+        
+        <div class="body-text">
+            <p>Type out an introduction about yourself for your audience to read. Just keep in mind to keep it short and sweet!</p> 
+            <p>Learn how to code it below.</p></div>
+        
+        <div class="steps">
+            
+            
+            <h2>Step 1</h2>
+            <p> Download the <a href="http://www.mattboldt.com/demos/typed-js/" target="_blank">Typed master file</a>.</p>
+            
+            
+            <h2>Step 2</h2>
+            <p> Include the jQuery library to the scripts section of your HTML.</p>
+            
+                <pre><code class=language-javascript>    https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js</code></pre>
+                
+            <h2>Step 3</h2>
+            <p> Find and include the <span style="color: lightskyblue; font-style: italic;">dist/typed.min.js</span> from the master file to your scripts section.</p>
+           
+           <h2>Step 4</h2>
+            <p> All you really need is this HTML markup to provide a space for your type box.</p>
+            
+            
+                <pre><code class=language-markup>    
+    &lt;span class="text">&lt;/span>
+           </code></pre>
+           
+           <h2>Step 5</h2>
+            <p> You are able to style your text by playing around with the placement and properties like font-family, color, text-shadow etc.</p>
+            
+            
+                <pre><code class=language-css>    
+    .text {
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        color: #ffffe0;
+        display: inline;
+        text-shadow: 2px 1px 0px rgba(150, 150, 150, 1);
+        line-height: 0.8;
+    }
+           </code></pre>
+           
+           
+           <h2>Step 6</h2>
+            <p> Type in the following script to make your type effect work. If you changed the class name in your HTML markup, make sure to match it in your script. </p>
+            
+            
+                <pre><code class=language-javascript>    
+    $(function repeat(){
+        $(".text").typed({
+            strings: ["Type anything you like here."],
+            typeSpeed: 100
+        
+        });
+         
+    });
+           </code></pre>
+           
+           <h2>Step 7 - Optional</h2>
+            <p> If you would like customize the blinking cursor. Type the following in your CSS code. Again, you can customize the size of your cursor as well as the color to your liking.</p>
+            
+            
+                <pre><code class=language-css>    
+    .typed-cursor{
+        font-size: 60px;
+        color: lightyellow;
+        opacity: 1;
+        -webkit-animation: blink 0.7s infinite;
+        -moz-animation: blink 0.7s infinite;
+        animation: blink 0.7s infinite;
+    }
+    
+    @keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-webkit-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-moz-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+           </code></pre>
+            
+        </div>
+            
+    </main>
+    
+    <footer>
+    <p>&copy; 2017 April Alayon. <a href="credits.html">Credits</a>. For educational purposes only.</p> 
+</footer>
+    
+<!--Scripts goes here-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="plug-ins/typed.js-master/dist/typed.min.js"></script>
+   <script src="scripts/tutorials.js"></script>
+   <script src="scripts/prism.js"></script>
+   <script src="scripts/stickynav.js"></script>
+    
+</body>
+</html>
